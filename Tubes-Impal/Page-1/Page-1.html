@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpakCoffee</title>
+    <link rel="stylesheet" href="TubesCSS.css">
+</head>
+<body>
+    <!-- page 1 -->
+    <div id="page1" class="custom-layout">
+        <header class="header">
+            <h1>OpakCoffee</h1>
+        </header>
+        <section class="main-content">
+            <div class="coffee-image">
+                <img src="cofffe.png" alt="Coffee image">
+            </div>
+            <h2>Enjoy Your Coffee</h2>
+            <button onclick="showLoginPage()">Get Started</button>
+        </section>
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <!-- page 2 -->
+    <div id="page2" class="hidden">
+        <div class="container">
+            <div class="header">
+                <img src="coffee.jpg" alt="Coffee Cup">
+                <p>Need some help?</p>
+            </div>
+            <div class="main">
+                <h1>Getting Started</h1>
+                <p>Sign in or create an account to continue</p>
+                <div class="social-media">
+                    <a href="#"><img src="google.svg" alt="Google"></a>
+                    <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+                </div>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="email"><img src="user.svg" alt="User"></label>
+                        <input type="email" id="email" placeholder="Email or Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><img src="lock.svg" alt="Lock"></label>
+                        <input type="password" id="password" placeholder="Password">
+                        <img src="eye.svg" alt="Eye" class="show-password">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <button type="submit">SIGN IN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLoginPage() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
